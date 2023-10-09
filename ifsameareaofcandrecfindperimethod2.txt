@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+{
+int l=44,b=56;
+float r,arear,areac,peric;
+area=l*b;
+areac=arear;
+r=sqrt(areac/3.14);
+areac=3.14*r*r;
+peric=arear*2/r;
+printf("the area of rectangle=%f\n",arear);
+printf("the area of circle=%f\n",areac);
+printf("perimeter of circle=%f\n",peric);
+}
