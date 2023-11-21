@@ -1,4 +1,3 @@
-
 //title of program
 //program to print hello world using tab character
 //header file
@@ -7,6 +6,6 @@
 int main()
 {
     //output statement
-    printf("hello world\t");
+    printf("hello world \t hello world");
     return 0;
 }
