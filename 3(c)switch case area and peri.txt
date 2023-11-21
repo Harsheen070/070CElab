@@ -1,70 +1,71 @@
-// header file
 #include <stdio.h>
 #include <math.h>
 
-// function heading
-void calculate_area_perimeter() 
-{
-    // variable declaration
-    int n, area, per, length, breadth, Side, radius;
+// Function heading
+void calculate_area_perimeter() {
+    // Variable declaration
+    int n, length, breadth, side, radius;
+    float area, perimeter;
+
+    // Menu for user input
     printf("Enter your choice:\n1. for area of circle\n2. for area of rectangle\n3. for area of square\n");
     scanf("%d", &n);
-    switch (n) 
-    {
+
+    switch (n) {
         case 1:
-            // output statement
+            // Input statements
             printf("Enter the radius of the circle: ");
-            // input statement
             scanf("%d", &radius);
-            // formula used
-            area = 3.14159 * pow(radius, 2); 
-            // Output statement
-            printf("Area of the circle = %.2f", area);
-            // formula used
-            per = 2 * 3.14159 * radius; 
-            // Output statement
-            printf("Perimeter of the circle = %.2f", per);
+
+            // Formulas for area and perimeter
+            area = 3.14159 * pow(radius, 2);
+            perimeter = 2 * 3.14159 * radius;
+
+            // Output statements
+            printf("Area of the circle = %.2f\n", area);
+            printf("Perimeter of the circle = %.2f\n", perimeter);
             break;
+
         case 2:
-            // output statement
+            // Input statements
             printf("Enter the length of the rectangle: ");
-            // input statement
             scanf("%d", &length);
-            // output statement
+
             printf("Enter the breadth of the rectangle: ");
-            // input statement
             scanf("%d", &breadth);
-            // formula used
-            area = length * breadth; // Output statement
-            printf("Area of the rectangle = %.2f", area);
-            // formula used
-            per = 2 * (length + breadth); 
-            // Output statement
-            printf("Perimeter of the rectangle = %.2f", per);
+
+            // Formulas for area and perimeter
+            area = length * breadth;
+            perimeter = 2 * (length + breadth);
+
+            // Output statements
+            printf("Area of the rectangle = %.2f\n", area);
+            printf("Perimeter of the rectangle = %.2f\n", perimeter);
             break;
+
         case 3:
-            // output statement
+            // Input statement
             printf("Enter the side of the square: ");
-            // input statement
-            scanf("%d", &Side);
-            // formula used
-            area = pow(Side, 2); // Output statement
-            printf("Area of the square = %.2f", area);
-            // formula used
-            per = 4 * Side; 
-            // Output statement
-            printf("Perimeter of the square = %.2f", per);
+            scanf("%d", &side);
+
+            // Formulas for area and perimeter
+            area = pow(side, 2);
+            perimeter = 4 * side;
+
+            // Output statements
+            printf("Area of the square = %.2f\n", area);
+            printf("Perimeter of the square = %.2f\n", perimeter);
             break;
+
         default:
-            printf("Invalid choice. Please choose 1-3.");
+            printf("Invalid choice. Please choose 1-3.\n");
             break;
     }
 }
 
 // Main function
-int main() 
-{
-    // calling function
+int main() {
+    // Calling the function
     calculate_area_perimeter();
     return 0;
 }
