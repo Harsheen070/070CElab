@@ -1,0 +1,24 @@
+EXPERIMENT 12(b):  write a program to store information of a student using union
+#include <stdio.h>
+
+void main() {
+    union student {
+        int rollNumber;
+        char studentName[50];
+        float averageGrade;
+    };
+    
+    union student students;
+    
+    printf("Enter the student Roll number: \n");
+    scanf("%d", &students.rollNumber);
+    printf("\nStudent Roll number: %d\n", students.rollNumber);
+    
+    printf("Enter the student name: \n");
+    scanf("%s", students.studentName);
+    printf("\nStudent name: %s\n", students.studentName);
+    
+    printf("Enter the student average grade: \n");
+    scanf("%f", &students.averageGrade);
+    printf("\nStudent average grade: %f\n", students.averageGrade);
+}
