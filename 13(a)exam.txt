@@ -1,0 +1,29 @@
+experiment 13(a):for reading and writing the contents of a file 
+#include<stdio.h>
+#include<stdlib>
+int main()
+{
+ FILE *file_write = fopen("example.txt", "w");
+    if (file_write == NULL) 
+    {
+        printf("Error opening file for writing");
+        return 1;
+    }
+ fprintf(file_write,"hello,worl and this is a statement");
+ flose(file_write);
+printf("Successfully wrote to file\n");
+FILE *file_read = fopen("example.txt", "r");
+    if (file_read == NULL) 
+    {
+        printf("Error opening file for reading");
+        return 1;
+    }
+ fprintf("contents read from the file are:\n");
+ int ch;
+ while ((ch=fgetc(file_read) ! = EOF )
+ {
+ putchar(ch);
+}
+  fclose(file_read);
+    return 0;
+}
