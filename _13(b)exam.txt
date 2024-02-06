@@ -1,0 +1,25 @@
+experiment 13(b):program for reading and writing student marks data from a file
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int q1,q2,q3;
+char fname[30];
+FILE *ifp,*ofp;
+if((ifp==fopen("input.txt","r")==NULL||(ofp==fopen("output.txt","w"))
+{
+printf("error opening file ");
+exit (1);
+}
+while(!feof(ifp))
+{
+fscanf(ifp,"%s,%d,%d,%d",&fname,&q1,&q2,&q3);
+printf(ofp,"%s,%d,%d,%d",fname,q1,q2,q3);
+fprintf(ofp,"%d,%d,%d",q1,q2,q3);
+}
+  printf("Copied the file successfully\n");
+fclose(ifp);
+fclose(ofp);
+return 0;
+}
+
