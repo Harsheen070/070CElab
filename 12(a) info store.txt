@@ -1,0 +1,27 @@
+EXPERIMENT 12(a):programme to store the information of student marks using structures and find the total marks of individual student
+#include <stdio.h>
+
+struct student {
+    int m1, m2, m3;
+    int total;
+    float avg;
+};
+
+int main() {
+    struct student students;
+
+    printf("Enter the marks of student:\n");
+    scanf("%d %d %d", &students.m1, &students.m2, &students.m3);
+
+    students.total = students.m1 + students.m2 + students.m3;
+    students.avg = (float)students.total / 3;
+
+    printf("\nDetails for student:\n");
+    printf("Mark 1: %d\n", students.m1);
+    printf("Mark 2: %d\n", students.m2);
+    printf("Mark 3: %d\n", students.m3);
+    printf("Total marks: %d\n", students.total);
+    printf("Average marks: %.2f\n", students.avg);
+
+    return 0;
+}
